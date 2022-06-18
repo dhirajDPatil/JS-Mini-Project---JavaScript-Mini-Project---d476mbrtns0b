@@ -1,1 +1,19 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body{
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 500px;
+    height: 500px;
+    background-color: blueviolet;
+}
+
+h2{
+    text-transform: uppercase;
+}
