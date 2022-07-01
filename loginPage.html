@@ -5,15 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
-    <title>Login Page</title>
+    <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <form action="index.html" method="POST" onsubmit="authenticateUserRegistration(event)">
-            <div class="name feilds">
-                <h2>Your Name</h2>
-                <input type="text" id="nameId" placeholder="Enter Your Name">
-            </div>
+    <div class="container loginP">
+        <form action="/loginPage.html" method="POST">
             <div class="email feilds">
                 <h2>Login Id</h2>
                 <input type="text" id="loginId" placeholder="Enter Login Id">
@@ -22,8 +18,8 @@
                 <h2>Password</h2>
                 <input type="password" id="currentp">
             </div>
-            <button type="submit">Register</button>
-            <h4>Already Registered? <a href="/loginPage.html">Login</a></h4>
+            <button type="submit" onclick="authenticateUserLogin(event)">Login</button>
+            <h4><a href="/index.html">New Registration?</a></h4>
         </form>
     </div>
     <script src="/App.js"></script>

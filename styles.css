@@ -9,11 +9,48 @@ body{
 }
 
 .container{
-    width: 500px;
-    height: 500px;
-    background-color: blueviolet;
+    margin-top: 50px;
+    width: 420px;
+    height: 420px;
+    background-color: rgb(82, 17, 144);
+    display: flex;
+    justify-content: center;
+}
+
+.feilds{
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    align-items: center;
+}
+
+h2{
+    color: yellow;
+}
+
+input{
+    border-radius: 5px;
+    width: fit-content;
+    height: 25px;
+}
+
+button{
+    margin-top: 20px;
+    height: 30px;
+    width: 80px;
+    position: relative;
+    left: 135px;
 }
 
 h2{
     text-transform: uppercase;
+}
+
+a{
+    color: yellow;
+}
+
+.loginP{
+    height: 320px;
 }
