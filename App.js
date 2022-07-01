@@ -3,12 +3,15 @@ function authenticateUserRegistration(ev){
     var userName = document.getElementById("nameId").value;
     var userN = document.getElementById("loginId").value;
     var passW = document.getElementById("currentp").value;
-    localStorageOfCredentials(userN, passW);
+    localStorageOfCredentials(userN, passW, userName);
 }
 
-function localStorageOfCredentials(email, password){
-    if(!userExist(email)){
-        localStorage.setItem(email,password);
+function localStorageOfCredentials(email, password, userName){
+    if(!userExist(email)){  // ! used initially
+        const info = {};
+        info.uname = userName;
+        info.pword = password;
+        localStorage.setItem(email,JSON.stringify(info));
         alert("Successfully Registered...");
         location.replace("https://formafitnessclub.netlify.app/");
     }else{
@@ -18,12 +21,13 @@ function localStorageOfCredentials(email, password){
 }  // stored email and password within local storage
 
 function userExist(email){
-    try{
-        let x = localStorage.getItem(email);
+    let x = JSON.parse(localStorage.getItem(email));
+    if(x == null){
+        return false;
+    } else{
         alert(`${email} already registered, use different email ID.`);
         return true;
-    } catch{
-        return false;
+
     }
 }
 
@@ -33,12 +37,12 @@ function authenticateUserLogin(e){
     var passW = document.getElementById("currentp").value;
     let userPassWord;
     try{
-        userPassWord = localStorage.getItem(userN)
+        userPassWord = JSON.parse(localStorage.getItem(userN));
     } catch{
-        alert("No such user exist");
+        alert("No such user exist/ Check Your Credentials");
         return;
     }
-    if(passW == userPassWord){
+    if(passW == userPassWord.pword){
         alert("Authorized");
         document.getElementById("loginId").value = "";
         document.getElementById("currentp").value = "";
