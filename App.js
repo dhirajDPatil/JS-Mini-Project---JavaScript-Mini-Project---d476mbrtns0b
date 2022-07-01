@@ -14,6 +14,8 @@ function localStorageOfCredentials(email, password, userName){
         localStorage.setItem(email,JSON.stringify(info));
         alert("Successfully Registered...");
         location.replace("https://formafitnessclub.netlify.app/");
+        alert(`Hello ${userName}, Welcome to Forma Gym`);
+        
     }else{
         document.getElementById("loginId").value = "";
         document.getElementById("currentp").value = "";
@@ -43,10 +45,11 @@ function authenticateUserLogin(e){
         return;
     }
     if(passW == userPassWord.pword){
-        alert("Authorized");
+        alert("Authorized..");
         document.getElementById("loginId").value = "";
         document.getElementById("currentp").value = "";
         location.replace("https://formafitnessclub.netlify.app/");
+        alert(`Hello ${userPassWord.uname}, welcome back!!!`);
     } else{
         alert("invalid credentials/ password");
     }
