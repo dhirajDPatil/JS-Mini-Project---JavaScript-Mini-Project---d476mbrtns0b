@@ -11,19 +11,19 @@
     <div class="container">
         <form action="index.html" method="POST" onsubmit="authenticateUserRegistration(event)">
             <div class="name feilds">
-                <h2>Your Name</h2>
-                <input type="text" id="nameId" placeholder="Enter Your Name">
+                <h5>Your Name:</h5>
+                <input type="text" id="nameId" placeholder="Enter Your Name" autocomplete="off" required>
             </div>
             <div class="email feilds">
-                <h2>Login Id</h2>
-                <input type="text" id="loginId" placeholder="Enter Login Id">
+                <h5>Login Id</h5>
+                <input type="text" id="loginId" placeholder="Enter Login Id" autocomplete="off" required>
             </div>
             <div class="password feilds">
-                <h2>Password</h2>
-                <input type="password" id="currentp">
+                <h5>Password</h5>
+                <input type="password" id="currentp" required>
             </div>
             <button type="submit">Register</button>
-            <h4>Already Registered? <a href="/loginPage.html">Login</a></h4>
+            <h5>Already Registered? <a href="/loginPage.html">Login</a></h5>
         </form>
     </div>
     <script src="/App.js"></script>

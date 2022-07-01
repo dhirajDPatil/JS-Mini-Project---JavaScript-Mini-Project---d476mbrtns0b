@@ -11,15 +11,15 @@
     <div class="container loginP">
         <form action="/loginPage.html" method="POST">
             <div class="email feilds">
-                <h2>Login Id</h2>
-                <input type="text" id="loginId" placeholder="Enter Login Id">
+                <h5>Login Id</h5>
+                <input type="text" id="loginId" placeholder="Enter Login Id" autocomplete="off" required>
             </div>
             <div class="password feilds">
-                <h2>Password</h2>
-                <input type="password" id="currentp">
+                <h5>Password</h5>
+                <input type="password" id="currentp" required>
             </div>
             <button type="submit" onclick="authenticateUserLogin(event)">Login</button>
-            <h4><a href="/index.html">New Registration?</a></h4>
+            <h5><a href="/index.html">New Registration?</a></h5>
         </form>
     </div>
     <script src="/App.js"></script>

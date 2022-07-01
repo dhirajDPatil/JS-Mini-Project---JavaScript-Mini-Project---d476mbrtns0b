@@ -3,7 +3,7 @@
 }
 
 body{
-    background-color: aqua;
+    background-color: rgb(10, 97, 147);
     display: flex;
     justify-content: center;
 }
@@ -11,36 +11,42 @@ body{
 .container{
     margin-top: 50px;
     width: 420px;
-    height: 420px;
-    background-color: rgb(82, 17, 144);
+    height: 340px;
+    background-color: white;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 
-.feilds{
-    padding-top: 25px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-content: center;
-    align-items: center;
-}
-
-h2{
-    color: yellow;
+h5{
+    color: black;
+    font-weight: 400;
+    margin-bottom: 2px;
+    margin-top: 15px;
 }
 
 input{
-    border-radius: 5px;
-    width: fit-content;
-    height: 25px;
+    border-radius: 0;
+    border: 0.5px solid gray;
+    width: 300px;
+    height: 30px;
 }
 
 button{
+    font-weight: 600;
     margin-top: 20px;
-    height: 30px;
-    width: 80px;
-    position: relative;
+    width: 305px;
+    height: 40px;
     left: 135px;
+    color: coral;
+    border: none;
+    border-radius: 5px;
+    background-color: #5e35b1;
+}
+
+button:hover{
+    color: rgb(32, 218, 32);
+    background-color: #211796;
 }
 
 h2{
@@ -48,9 +54,15 @@ h2{
 }
 
 a{
-    color: yellow;
+    color: rgb(0, 85, 255);
 }
 
 .loginP{
-    height: 320px;
+    height: 270px;
 }
+
+a:hover{
+    zoom: 1.25;
+}
+
+
